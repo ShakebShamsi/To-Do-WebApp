@@ -213,7 +213,7 @@ li {
   padding-right: 8px;
 }
 
-#footer {
+/* #footer {
   background: #fff;
   color: #252b33;
   padding: 2.125rem 0;
@@ -228,7 +228,7 @@ li {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
+} */
 
 @media (max-width: 400px) {
   body {
