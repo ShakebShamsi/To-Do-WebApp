@@ -12,9 +12,16 @@ body {
   height: 100vh;
   overflow: hidden;
   background: linear-gradient(135deg, #5683a5, #2d5cfe);  
-
+  padding-bottom: 60px;
 }
 
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #252b33;
+  text-align: center;
+  margin-bottom: 20px;
+}
 ::selection {
   color: #fff;
   background: #3c87ff;
@@ -23,7 +30,7 @@ body {
 .wrapper {
   max-width: 405px;
   padding: 28px 0 25px;
-  margin: 137px auto;
+  margin: 90px auto;
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -115,10 +122,14 @@ li {
 }
 
 .task-box {
-  margin-top: 20px;
-  margin-right: 5px;
-  padding: 0 20px 10px 25px;
-}
+   margin-top: 20px;
+   margin-right: 5px;
+   padding: 0 20px 10px 25px;
+   max-height: 150px; 
+   overflow-y: auto;
+   border-radius: 5px;
+ }
+ 
 
 .task-box.overflow {
   overflow-y: auto;
@@ -126,16 +137,21 @@ li {
 }
 
 .task-box::-webkit-scrollbar {
-  width: 5px;
-}
-.task-box::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 25px;
-}
-.task-box::-webkit-scrollbar-thumb {
-  background: #e6e6e6;
-  border-radius: 25px;
-}
+   width: 6px;
+ }
+ .task-box::-webkit-scrollbar-track {
+   background: #f0f0f0;
+   border-radius: 10px;
+ }
+ .task-box::-webkit-scrollbar-thumb {
+   background: #b0b0b0;
+   border-radius: 10px;
+   transition: background 0.3s;
+ }
+ .task-box::-webkit-scrollbar-thumb:hover {
+   background: #888;
+ }
+ 
 .task-box .task {
   list-style: none;
   font-size: 17px;
@@ -213,22 +229,32 @@ li {
   padding-right: 8px;
 }
 
-/* #footer {
-  background: #fff;
-  color: #252b33;
-  padding: 2.125rem 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  
-
-}
-#footer .row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-} */
+#footer {
+   width: 100%;
+   padding: 15px 0;
+   background-color: #ffffff;
+   color: #252b33;
+   text-align: center;
+   font-size: 14px;
+   box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   z-index: 1000;
+ }
+ .portfolio {
+   color: #3c87ff;
+   text-decoration: none;
+   font-weight: 500;
+ }
+ 
+ @media (max-height: 600px) {
+   #footer {
+     font-size: 12px;
+     padding: 10px 0;
+   }
+ }
+ 
 
 @media (max-width: 400px) {
   body {
